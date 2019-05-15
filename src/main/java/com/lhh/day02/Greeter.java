@@ -1,3 +1,8 @@
+package com.lhh.day02;
+
+import akka.actor.UntypedActor;
+import com.alibaba.fastjson.JSONObject;
+
 /**
  * Copyright (C), 2019-2019
  * FileName: Greeter
@@ -9,20 +14,13 @@
  * @create 2019/5/14
  * @since 1.0.0
  */
-
-
-package com.lhh.day02;
-
-import akka.actor.UntypedActor;
-import com.alibaba.fastjson.JSONObject;
-
 public class Greeter extends UntypedActor {
 
     public void onReceive(Object msg) throws Exception {
         try {
             System.out.println("Greeter收到的数据为：" + JSONObject.toJSONString(msg));
             getSender().tell("Greeter工作完成。", getSelf());//给发送至发送信息.
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
 

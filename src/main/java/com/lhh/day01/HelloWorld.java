@@ -1,3 +1,11 @@
+
+
+package com.lhh.day01;
+
+import akka.actor.ActorRef;
+import akka.actor.Props;
+import akka.actor.UntypedActor;
+
 /**
  * Copyright (C), 2019-2019
  * FileName: HelloWorld
@@ -9,13 +17,6 @@
  * @create 2019/5/14
  * @since 1.0.0
  */
-
-
-package com.lhh.day01;
-
-import akka.actor.ActorRef;
-import akka.actor.Props;
-import akka.actor.UntypedActor;
 
 public class HelloWorld extends UntypedActor {
 
