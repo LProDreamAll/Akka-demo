@@ -35,7 +35,8 @@ public class CompletableFutureService {
 
     public CompletableFuture<Message> get(String payload, Long id) {
         CompletableFuture<Message> future = new CompletableFuture<>();
-        ActorRef workerActor = actorSystem.actorOf(springExtension.props("workerActor", future), "worker-actor");
+        ActorRef workerActor = actorSystem.actorOf(SpringExtension.SPRING_EXTENSION_PROVIDER.get(actorSystem).props("workerActor", future), "worker-actor");
+//                actorSystem.actorOf(springExtension.props("workerActor", future), "worker-actor");
         workerActor.tell(new Message(payload, id, workerActor.hashCode()), null);
         return future;
     }

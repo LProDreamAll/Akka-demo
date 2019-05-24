@@ -9,6 +9,8 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import com.typesafe.config.Config;
 
+import static com.lhh.akkademo.springakka.di.SpringExtension.SPRING_EXTENSION_PROVIDER;
+
 /**
  * Copyright (C), 2019-2019
  * FileName: AppConfiguration
@@ -30,7 +32,8 @@ public class AppConfiguration {
     @Bean
     public ActorSystem actorSystem() {
         ActorSystem actorSystem = ActorSystem.create("demo-actor-system", akkaConfiguration());
-        springExtension.initialize(applicationContext);
+        SPRING_EXTENSION_PROVIDER.get(actorSystem).initialize(applicationContext);
+//        springExtension.initialize(applicationContext);
         return actorSystem;
     }
 
