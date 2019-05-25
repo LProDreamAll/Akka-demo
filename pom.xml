@@ -11,6 +11,7 @@
     <modules>
         <module>akka-sample</module>
         <module>akkademo</module>
+        <module>standard-akka</module>
     </modules>
 
     <properties>
