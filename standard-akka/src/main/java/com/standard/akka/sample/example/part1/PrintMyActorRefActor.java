@@ -1,4 +1,4 @@
-package com.standard.akka.sample.example;
+package com.standard.akka.sample.example.part1;
 
 import akka.actor.AbstractActor;
 import akka.actor.ActorRef;
