@@ -1,10 +1,9 @@
-package com.standard.akka.myactor;
+package com.standard.akka.myactor.part1;
 
 import akka.actor.AbstractActor;
 import akka.actor.Props;
 import akka.event.Logging;
 import akka.event.LoggingAdapter;
-import jdk.nashorn.internal.objects.annotations.Constructor;
 import lombok.AllArgsConstructor;
 
 /**

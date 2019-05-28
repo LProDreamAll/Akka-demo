@@ -1,9 +1,9 @@
-package com.standard.akka.myactor;
+package com.standard.akka.myactor.part1;
 
 import akka.actor.ActorRef;
 import akka.actor.ActorSystem;
-import com.standard.akka.myactor.Greeter.WhoToGreet;
-import com.standard.akka.myactor.Greeter.Greet;
+import com.standard.akka.myactor.part1.Greeter.WhoToGreet;
+import com.standard.akka.myactor.part1.Greeter.Greet;
 import java.io.IOException;
 
 /**

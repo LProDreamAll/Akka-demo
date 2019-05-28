@@ -1,4 +1,4 @@
-package com.standard.akka.myactor;
+package com.standard.akka.myactor.part1;
 
 import akka.actor.AbstractActor;
 import akka.actor.ActorRef;
@@ -7,7 +7,7 @@ import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
-import com.standard.akka.myactor.Printer.Greeting;
+import com.standard.akka.myactor.part1.Printer.Greeting;
 /**
  * Copyright (C), 2019-2019
  * FileName: Greeter
