@@ -22,6 +22,8 @@
     </properties>
 
     <dependencies>
+        <!-- https://mvnrepository.com/artifact/org.scala-lang.modules/scala-java8-compat -->
+
 
         <dependency>
             <groupId>org.scala-lang</groupId>

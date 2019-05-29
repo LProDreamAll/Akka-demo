@@ -8,6 +8,8 @@ import lombok.NoArgsConstructor;
 import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
 import com.standard.akka.myactor.part1.Printer.Greeting;
+import lombok.extern.slf4j.Slf4j;
+
 /**
  * Copyright (C), 2019-2019
  * FileName: Greeter
@@ -17,6 +19,7 @@ import com.standard.akka.myactor.part1.Printer.Greeting;
  * Motto: 0.45%
  */
 @RequiredArgsConstructor
+@Slf4j
 public class Greeter extends AbstractActor {
     @NonNull
     private final String message;
@@ -44,6 +47,7 @@ public class Greeter extends AbstractActor {
         return receiveBuilder()
                 .match(WhoToGreet.class, wtg -> {
                     this.greeting = message + ", " + wtg.who;
+                    log.info("Greeter:[{}]",message);
                 })
                 .match(Greet.class, x -> {
                     printerActor.tell(new Greeting(greeting), getSelf());
