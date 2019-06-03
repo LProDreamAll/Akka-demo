@@ -12,6 +12,7 @@
         <module>akka-sample</module>
         <module>akkademo</module>
         <module>standard-akka</module>
+        <module>fakepanshi</module>
     </modules>
 
     <properties>
