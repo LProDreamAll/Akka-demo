@@ -13,6 +13,7 @@
         <module>akkademo</module>
         <module>standard-akka</module>
         <module>fakepanshi</module>
+        <module>yudao-spider</module>
     </modules>
 
     <properties>
