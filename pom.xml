@@ -14,6 +14,7 @@
         <module>standard-akka</module>
         <module>fakepanshi</module>
         <module>yudao-spider</module>
+        <module>my-tools</module>
     </modules>
 
     <properties>
