@@ -1,36 +1,36 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<configuration>
-    <include resource="org/springframework/boot/logging/logback/base.xml"/>
+<!--<?xml version="1.0" encoding="UTF-8"?>-->
+<!--<configuration>-->
+    <!--<include resource="org/springframework/boot/logging/logback/base.xml"/>-->
 
-    <!-- 控制台 -->
-    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
-        <encoder>
-            <Pattern>[%-5level] %d{HH:mm:ss} [%X{TRACE_ID}] %logger{36} %line: %msg %n</Pattern>
-            <charset>UTF-8</charset>
-        </encoder>
-    </appender>
+    <!--&lt;!&ndash; 控制台 &ndash;&gt;-->
+    <!--<appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">-->
+        <!--<encoder>-->
+            <!--<Pattern>[%-5level] %d{HH:mm:ss} [%X{TRACE_ID}] %logger{36} %line: %msg %n</Pattern>-->
+            <!--<charset>UTF-8</charset>-->
+        <!--</encoder>-->
+    <!--</appender>-->
 
-    <!-- 记录到文件 (每天一个文件) -->
-    <appender name="dailyRollingFileAppender" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <File>log/api/spring-boot.log</File>   <!-- 最新的log文件名 -->
-        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <FileNamePattern>log/api/spring-boot.%d{yyyy-MM-dd}.log</FileNamePattern>
-            <maxHistory>30</maxHistory>
-        </rollingPolicy>
-        <encoder>
-            <Pattern>%d{yyyy-MM-dd HH:mm:ss} [%X{TRACE_ID}] [%thread] %-5level %logger{35} : %n %msg %n</Pattern>
-            <charset>UTF-8</charset>
-        </encoder>
-    </appender>
+    <!--&lt;!&ndash; 记录到文件 (每天一个文件) &ndash;&gt;-->
+    <!--<appender name="dailyRollingFileAppender" class="ch.qos.logback.core.rolling.RollingFileAppender">-->
+        <!--<File>log/api/spring-boot.log</File>   &lt;!&ndash; 最新的log文件名 &ndash;&gt;-->
+        <!--<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">-->
+            <!--<FileNamePattern>log/api/spring-boot.%d{yyyy-MM-dd}.log</FileNamePattern>-->
+            <!--<maxHistory>30</maxHistory>-->
+        <!--</rollingPolicy>-->
+        <!--<encoder>-->
+            <!--<Pattern>%d{yyyy-MM-dd HH:mm:ss} [%X{TRACE_ID}] [%thread] %-5level %logger{35} : %n %msg %n</Pattern>-->
+            <!--<charset>UTF-8</charset>-->
+        <!--</encoder>-->
+    <!--</appender>-->
 
-    <!-- 将上面两个 appender 关联到我们的项目 -->
-    <logger name="com.cheche.fakepanshi" level="DEBUG" additivity="false">
-        <appender-ref ref="CONSOLE"/>
-        <appender-ref ref="dailyRollingFileAppender" />
-    </logger>
+    <!--&lt;!&ndash; 将上面两个 appender 关联到我们的项目 &ndash;&gt;-->
+    <!--<logger name="com.cheche.fakepanshi" level="DEBUG" additivity="false">-->
+        <!--<appender-ref ref="CONSOLE"/>-->
+        <!--<appender-ref ref="dailyRollingFileAppender" />-->
+    <!--</logger>-->
 
 
-    <property name="LOG_FILE" value="log/spring-boot-blog-tmp.log"/>
-    <logger name="org.springframework.web" level="INFO"/>
-    <logger name="org.springframework.boot.web.filter" level="INFO"/>
-</configuration>
+    <!--<property name="LOG_FILE" value="log/spring-boot-blog-tmp.log"/>-->
+    <!--<logger name="org.springframework.web" level="INFO"/>-->
+    <!--<logger name="org.springframework.boot.web.filter" level="INFO"/>-->
+<!--</configuration>-->
