@@ -22,14 +22,15 @@ spring:
     url: jdbc:mysql://127.0.0.1:3306/persontest?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true
     hikari:
       # Hikari will use the above plus the following to setup connection pooling
-      minimum-idle: 3
-      maximum-pool-size: 10
+      minimum-idle: 1
+      maximum-pool-size: 3
       auto-commit: true
       idle-timeout: 30000
       pool-name: HikariCPPool
       max-lifetime: 1800000
       connection-timeout: 30000
       connection-test-query: SELECT 1
+
 
 
 

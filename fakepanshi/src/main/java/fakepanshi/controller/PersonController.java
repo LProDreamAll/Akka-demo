@@ -4,6 +4,7 @@ import com.alibaba.fastjson.JSON;
 
 import fakepanshi.entity.Person;
 import fakepanshi.service.IPersonService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -22,6 +23,7 @@ import java.util.List;
  */
 
 @RestController
+@Slf4j
 public class PersonController {
 
     @Autowired
@@ -31,7 +33,8 @@ public class PersonController {
     @RequestMapping(value = "/hello",method = RequestMethod.GET)
     public List<Person> getAll(){
         List<Person> list=iPersonService.listAll();
-        System.out.println("选出所有的人："+ JSON.toJSONString(list));
+        log.info("选出所有的人：[{}]",JSON.toJSONString(list));
+        log.debug("选出所有的人：[{}]",JSON.toJSONString(list));
         return list;
     }
 
